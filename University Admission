@@ -1,0 +1,438 @@
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args) {
+        float per;
+        int BSCS = 90000;
+        int BBA = 80000;
+        int MEDIASCIENCE = 70000;
+        int ADP = 50000;
+        int ADA = 45000;
+        int q1;
+        int q2;
+        int q3;
+        int q4;
+        int q5;
+        int count = 0;
+        int minReqMarks = 3;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("\n\t\t\t\tWelcome to Iqra University");
+        System.out.println("=========================================================");
+        System.out.println("-> Please select below options according to your queries.");
+        System.out.println("1)-Fess Structure\n2)-Admission Process\n3)-Exit");
+        System.out.print("Press the number w.r.t what you are looking for :- ");
+        int a = input.nextInt();
+
+        if (a == 1) {
+            System.out.println("=========================================================");
+            System.out.println("\t\t\t\t\tFEES PORTAL");
+            System.out.println("=========================================================");
+            System.out.println("->Here is the fees structure according to the fields in our University.");
+            System.out.println("\n1)Field :-BSCS \n-Total Semesters = 8 \n-Per Semester fees = RS " + BSCS);
+            System.out.println("=========================================================");
+            System.out.println("2)Field :-BBA \n-Total Semesters = 8 \n-Per Semester fees = RS " + BBA);
+            System.out.println("==========================================================");
+            System.out.println("3) Field:-MEDIA SCIENCE \n-Total Semesters = 8 \n-Per Semester fees = RS " + MEDIASCIENCE);
+            System.out.println("==========================================================");
+            System.out.println("4) Field:-ADP \n-Total Semesters = 4 \n-Per Semester fees = RS " + ADP);
+            System.out.println("==========================================================");
+            System.out.println("5) Field:-ADA \n-Total Semesters = 4 \n-Per Semester fees = RS " + ADA);
+            System.out.println("==========================================================\n");
+        }
+        if (a == 2) {
+            System.out.println("=========================================================");
+            System.out.println("\t\t\t\tADMISSION PORTAL");
+            System.out.println("=========================================================");
+            System.out.println("->For Admission in any field, You need to fill the form first.\n");
+            System.out.print("-Input your First name: ");
+            String fname = input.next();
+            System.out.print("-Input your Last name: ");
+            String lname = input.next();
+            System.out.print("-Input your Age: ");
+            int age = input.nextInt();
+            System.out.print("-Input your Addres: ");
+            String address = input.next();
+            System.out.print("-Input your Last Education Information: ");
+            String eduinfo = input.next();
+            System.out.print("-Input your Intermediate Percentage:");
+            per = input.nextFloat();
+
+            if (per >= 60 && per <= 100)
+            {
+                System.out.println("=========================================================");
+                System.out.println("\t\t\t\tELIGIBLITY CRITERIA");
+                System.out.println("=========================================================");
+                System.out.println("->You are eligible for following Fields. Select the field you want to take admission in and get ready for the Online Test.");
+                System.out.println("1)-BSCS\n2)-BBA\n3)-MEDIA SCIENCE");
+                System.out.print("Select the Field in which you want to apply:- ");
+                int field = input.nextInt();
+
+                switch (field) {
+                    case 1: {
+                        System.out.println("=========================================================");
+                        System.out.print("\t\t Online Test For BSCS  ");
+                        System.out.println("\n=========================================================");
+                        System.out.print("=> Picking at least 3 correct answers will make you eligible for the field in BSCS.");
+                        Scanner scan = new Scanner(System.in);
+                        System.out.println("\n\n1. What is a correct syntax to show output in Java?");
+                        //choose answer from these 4 options
+                        System.out.println("Choose 1 for System.out.println(); \nChoose 2 for Console.WriteLine(); \nChoose 3 for print(); \nChoose 4 for echo();");
+                        q1 = scan.nextInt();
+                        if (q1 != 1) {
+                            //if select wrong options
+                            System.out.println("Your answer is incorrect  System.out.println(); is the right answer .");
+                        }
+                        {
+                            while (q1 == 1) {
+                                System.out.println("==================");
+                                //selected right option
+                                System.out.println("Answer is correct");
+                                System.out.println("===================");
+                                q1++;
+                                count++;
+                            }
+                            System.out.println();
+                        }
+                        System.out.println("2. How do you insert COMMENTS in Java code?");
+                        System.out.println("Choose 1 for /* \nChoose 2 for // \nChoose 3 for # \nChoose 4 for \\ ");
+                        q2 = scan.nextInt();
+                        if (q2 != 2) {
+                            System.out.println("Your answer is incorrect // is the right answer.");
+                        }
+                        {
+                            while (q2 == 2) {
+                                System.out.println("==================");
+                                //selected right option
+                                System.out.println("Answer is correct");
+                                System.out.println("===================");
+                                q2++;
+                            }
+                            System.out.println();
+                        }
+                        System.out.println("3. Which data type is used to create a variable that should store text?");
+                        //choose answer from these 4 options
+                        System.out.println("Choose 1 for Txt \nChoose 2 for String  \nChoose 3 for myString \nChoose 4 for string");
+                        q4 = scan.nextInt();
+                        if (q4 != 2) {
+                            System.out.println("Your answer is incorrect  String is the right answer.");
+                        }
+                        {
+                            while (q4 == 2) {
+                                //display message for right answer
+                                System.out.println("==================");
+                                //selected right option
+                                System.out.println("Answer is correct");
+                                System.out.println("===================");
+                                q4++;
+                                count++;
+                            }
+                            System.out.println();
+                        }
+                        System.out.println("4. How do you create a variable with the numeric value 5?");
+                        //choose answer from these 4 options
+                        System.out.println("Choose 1 for num x=5 \nChoose 2 for int x=5 \nChoose 3 for float x=5 \nChoose 4 for x=5");
+                        q3 = scan.nextInt();
+                        if (q3 != 4) {
+                            //display message for incorrect answer
+                            System.out.println("Your answer is incorrect  x=5 is the right answer.");
+                        }
+                        {
+                            while (q3 == 4) {
+                                //display message for right answer
+                                System.out.println("==================");
+                                //selected right option
+                                System.out.println("Answer is correct");
+                                System.out.println("===================");
+                                q3++;
+                                count++;
+                            }
+                            System.out.println();
+                        }       //name of a variable
+                        System.out.println("5. To declare an array in Java, define the variable type with:");
+                        System.out.println("Choose 1 for { } \nChoose 2 for < > \nChoose 3 for [ ] \nChoose 4 for ( )");
+                        q5 = scan.nextInt();
+                        if (q5 != 3) {
+                            System.out.println("Your answer is incorrect [ ] is the right answer.");
+                        }
+                        {
+                            while (q5 == 3) {
+                                //display message for right answer
+                                System.out.println("==================");
+                                //selected right option
+                                System.out.println("Answer is correct");
+                                System.out.println("===================");
+                                //stop repeating
+                                q5++;
+                                count++;
+                            }  //stop repeating
+                            System.out.println();
+                        }
+                        break;
+                    }
+                    case 2: {
+                        System.out.println("=========================================================");
+                        System.out.print("\t\t Online Test For BBA  ");
+                        System.out.println("\n=========================================================");
+                        System.out.print("=> Picking at least 3 correct answers will make you eligible for the field in BBA.");
+                        Scanner scan = new Scanner(System.in);
+                        System.out.println("\n\n1. The cost of debt capital is calculated on the basis of: ");
+                        //choose answer from these 4 options
+                        System.out.println("Choose 1 for Annual Interest \nChoose 2 for Net proceeds \nChoose 3 for Annual Depreciation \nChoose 4 for Capital");
+                        q1 = scan.nextInt();
+                        if (q1 != 1) {
+                            //if select wrong options
+                            System.out.println("Your answer is incorrect.Annual Interest is the right answer .");
+                        }
+                        {
+                            while (q1 == 1) {
+                                //selected right option
+                                System.out.println("==================");
+                                //selected right option
+                                System.out.println("Answer is correct");
+                                System.out.println("===================");
+
+                                q1++;
+                                count++;
+                            }
+                            System.out.println();
+                        }
+                        System.out.println("2. What is Factoring?");
+                        //choose answer from these 4 options
+                        System.out.println("Choose 1 for Production Plan \nChoose 2 for New Financial Service \nChoose 3 for Cost of Sales \nChoose 4 for All of the above");
+                        q2 = scan.nextInt();
+                        if (q2 != 2) {
+                            System.out.println("Your answer is incorrect  New Financial Service is the right answer.");
+                        }
+                        {
+                            while (q2 == 2) {
+                                System.out.println("==================");
+                                //selected right option
+                                System.out.println("Answer is correct");
+                                System.out.println("===================");
+                                q2++;
+                                count++;
+                            }
+                            System.out.println();
+                        }       //n answer of this question
+                        System.out.println("3. _____________ is called as Dividend Ratio Method.");
+                        //choose answer from these 4 options
+                        System.out.println("Choose 1 for Debt Equity Method \nChoose 2 for Dividend Yield Method  \nChoose 3 for Equity Method \nChoose 4 for Asset Method");
+                        q4 = scan.nextInt();
+                        if (q4 != 2) {
+                            System.out.println("Your answer is incorrect  Dividend Yield Method is the right answer.");
+                        }
+                        {
+                            while (q4 == 2) {
+                                //display message for right answer
+                                System.out.println("==================");
+                                //selected right option
+                                System.out.println("Answer is correct");
+                                System.out.println("===================");
+                                q4++;
+                                count++;
+                            }
+                            System.out.println();
+                        }       //display Question
+                        System.out.println("4. _____________ is the limitation of Traditional approach of Financial Management.");
+                        //choose answer from these 4 options
+                        System.out.println("Choose 1 for More emphasis on long term problems \nChoose 2 for Ignores allocation of resources \nChoose 3 for One-sided approach \nChoose 4 for All of the above");
+                        q3 = scan.nextInt();
+                        if (q3 != 4) {
+                            //display message for incorrect answer
+                            System.out.println("Your answer is incorrect  All of the above is the right answer.");
+                        }
+                        {
+                            while (q3 == 4) {
+                                //display message for right answer
+                                System.out.println("==================");
+                                //selected right option
+                                System.out.println("Answer is correct");
+                                System.out.println("===================");
+                                q3++;
+                                count++;
+                            }
+                            System.out.println();
+                        }       //name of a variable
+                        System.out.println("5. A risk free security has __________ variance.");
+                        //choose answer from these 4 options
+                        System.out.println("Choose 1 for 4 \nChoose 2 for 2 \nChoose 3 for 0 \nChoose 4 for 6");
+                        q5 = scan.nextInt();
+                        if (q5 != 3) {
+                            System.out.println("Your answer is incorrect  0 is the right answer.");
+                        }
+                        {
+                            //using while loop
+                            while (q5 == 3) {
+                                //display message for right answer
+                                System.out.println("==================");
+                                //selected right option
+                                System.out.println("Answer is correct");
+                                System.out.println("===================");
+                                //stop repeating
+                                q5++;
+                                count++;
+                            }  //stop repeating
+                            System.out.println();
+                        }
+                        break;
+                    }
+                    case 3: {
+                        System.out.println("=========================================================");
+                        System.out.print("\t\t Online Test For MEDIA SCIENCE  ");
+                        System.out.println("\n=========================================================");
+                        System.out.print("=> Picking at least 3 correct answers will make you eligible for the field in MEDIA SCIENCE.");
+                        Scanner scan = new Scanner(System.in);
+                        System.out.println("\n\n1. Mass media plays a vital role in_________");
+                        //choose answer from these 4 options
+                        System.out.println("Choose 1 for Forming \nChoose 2 for Caring \nChoose 3 for Reshaping \nChoose 4 for Redirecting");
+                        q1 = scan.nextInt();
+                        if (q1 != 1) {
+                            //if select wrong options
+                            System.out.println("Your answer is incorrect  Forming is the right answer .");
+                        }
+                        {
+                            while (q1 == 1) {
+                                //selected right option
+                                System.out.println("==================");
+                                //selected right option
+                                System.out.println("Answer is correct");
+                                System.out.println("===================");
+                                count = count + 1;
+                                q1++;
+                            }
+                            System.out.println();
+                        }
+                        System.out.println("2. The _________ educates people about the world outside of their locale");
+                        //choose answer from these 4 options
+                        System.out.println("Choose 1 for TV \nChoose 2 for Mass media \nChoose 3 for Newspaper \nChoose 4 for Films");
+                        q2 = scan.nextInt();
+                        if (q2 != 2) {
+                            System.out.println("Your answer is incorrect  Mass media is the right answer.");
+                        }
+                        {
+                            while (q2 == 2) {
+                                System.out.println("==================");
+                                //selected right option
+                                System.out.println("Answer is correct");
+                                System.out.println("===================");
+                                q2++;
+                                count = count + 1;
+                            }
+                            System.out.println();
+                        }       //n answer of this question
+                        System.out.println("3. The two step flow of communication model says that most people form their opinions under the influence of ");
+                        //choose answer from these 4 options
+                        System.out.println("Choose 1 for Friends \nChoose 2 for Opinion Leader  \nChoose 3 for Family \nChoose 4 for Opinion Followers");
+                        q4 = scan.nextInt();
+                        if (q4 != 2) {
+                            System.out.println("Your answer is incorrect  Opinion Leader is the right answer.");
+                        }
+                        {
+                            while (q4 == 2) {
+                                //display message for right answer
+                                System.out.println("==================");
+                                //selected right option
+                                System.out.println("Answer is correct");
+                                System.out.println("===================");
+                                q4++;
+                                count = count + 1;
+                            }
+                            System.out.println();
+                        }       //display Question
+                        System.out.println("4. The nature of a __________ is important than the meaning or content of the message.");
+                        //choose answer from these 4 options
+                        System.out.println("Choose 1 for Message \nChoose 2 for Carrier \nChoose 3 for Path \nChoose 4 for Medium");
+                        q3 = scan.nextInt();
+                        if (q3 != 4) {
+                            //display message for incorrect answer
+                            System.out.println("Your answer is incorrect  Medium is the right answer.");
+                        }
+                        {
+                            while (q3 == 4) {
+                                //display message for right answer
+                                System.out.println("==================");
+                                //selected right option
+                                System.out.println("Answer is correct");
+                                System.out.println("===================");
+                                q3++;
+                                count = count + 1;
+                            }
+                            System.out.println();
+                        }       //name of a variable
+                        System.out.println("5. ________ describe the ability to influence the importance placed on the topics for people");
+                        //choose answer from these 4 options
+                        System.out.println("Choose 1 for Medium is the message \nChoose 2 for Two step flow \nChoose 3 for Agenda setting \nChoose 4 for Propaganda model");
+                        q5 = scan.nextInt();
+                        if (q5 != 3) {
+                            System.out.println("Your answer is incorrect  Agenda setting is the right answer.");
+                        }
+                        {
+                            //using while loop
+                            while (q5 == 3) {
+                                //display message for right answer
+                                System.out.println("==================");
+                                //selected right option
+                                System.out.println("Answer is correct");
+                                System.out.println("===================");
+                                //stop repeating
+                                q5++;
+                                count = count + 1;
+                            }  //stop repeating
+                            System.out.println();
+                        }
+                        break;
+                    }
+                    default:
+                        System.out.print("Invalid choice. Please select the appropriate option. ");
+                        break;
+                }
+                if (count >= minReqMarks) {
+                    if (field == 1) {
+
+                        System.out.println("\t\tCongratulations! YOU ARE SELECTED!!");
+                        System.out.println("===================================================================");
+                        System.out.println("\t\tYour Information Confirmation:");
+                        System.out.println("==================================================================");
+                        System.out.println("Your Name: " + fname + lname + "\t\t Your Age: " + age + "\nYour Address=" + address + "\t\t Your Last Education: " + eduinfo + "\nYour Intermediate Percentage: " + per + "\nYour Admission Field: BSCS");
+                        System.out.println("\n=>Your Admission Details are successfully saved. Kindly visit our Campus with your Complete Documents.");
+                    }
+                        if (field == 2) {
+                            System.out.println("\t\tCongratulations! YOU ARE SELECTED!!");
+                            System.out.println("===================================================================");
+                            System.out.println("\t\tYour Information Confirmation:");
+                            System.out.println("==================================================================");
+                            System.out.println("Your Name: " + fname + lname + "\t\t Your Age: " + age + "\nYour Address=" + address + "\t\t Your Last Education: " + eduinfo + "\nYour Intermediate Percentage: " + per + "\nYour Admission Field: BBA");
+                            System.out.println("\n=>Your Admission Details are successfully saved. Kindly visit our Campus with your Complete Documents.");
+                        }
+
+                        if (field == 3)
+                        {
+                            System.out.println("\t\tCongratulations! YOU ARE SELECTED!!");
+                            System.out.println("===================================================================");
+                            System.out.println("\t\tYour Information Confirmation:");
+                            System.out.println("==================================================================");
+                            System.out.println("Your Name: " + fname + lname + "\t\t Your Age: " + age + "\nYour Address=" + address + "\t\t Your Last Education: " + eduinfo + "\nYour Intermediate Percentage: " + per + "\nYour Admission Field: MEDIA SCIENCE");
+                            System.out.println("\n=>Your Admission Details are successfully saved. Kindly visit our Campus with your Complete Documents.");
+                        }
+                    }
+                else
+                {
+                        System.out.println("Sorry! YOU AREN'T SELECTED!!");
+                    }
+                }
+            else
+            {
+                System.out.println("=========================================================");
+                System.out.println("\t\t\t\tELIGIBLITY CRITERIA");
+                System.out.println("=========================================================");
+                System.out.println("->You are eligible for following Fields. Select the field you want to take admission in and get ready for the Online Test.");
+                System.out.println("1)-ADP\n2)-ADA");
+                System.out.print("Select the Field in which you want to apply:- ");
+                int field = input.nextInt();
+                System.out.println("=>You have been selected in your desired field. Bring your complete documents and visit our Campus.");
+            }
+            }
+        }
+    }
+
